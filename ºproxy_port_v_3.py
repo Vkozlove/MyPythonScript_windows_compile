@@ -14,8 +14,8 @@ file_path = select_file()
 if not file_path:
     print("Файл не выбран.")
     exit()
-
-with open(file_path, "r") as file:
+    
+with open(file_path, "r", newline='') as file:
     lines = file.readlines()
 
 ip_addresses = []
