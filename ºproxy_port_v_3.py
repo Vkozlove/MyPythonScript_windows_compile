@@ -39,16 +39,19 @@ for line in lines:
 output = ""
 
 for ip in ip_addresses:
-    output += f"{ip};{port};{login};{password}\n"
+    output += f"{ip};{port};{login};{password};\n"
 
 # Получаем путь к каталогу, где находится файл new_proxy.txt
 directory = os.path.dirname(file_path)
 
 # Создаем путь к файлу output.txt в этом же каталоге
-output_path = os.path.join(directory, "output.txt")
+output_path = os.path.join(directory, "used_proxy.txt")
 
 # Сохраняем результат в файл output.txt в нужной директории
 with open(output_path, "w", newline='', encoding='utf-8') as file:
     file.write(output)
 
 print(f"Результат сохранен в файле {output_path}")
+
+
+
